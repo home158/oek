@@ -1,0 +1,7 @@
+/* Highlight elements on mouse-over */
+body {
+    color: blue;
+}
+.mb-5,header,footer {
+  display: none;
+}

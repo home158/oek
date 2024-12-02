@@ -1,0 +1,29 @@
+{
+    "name": "Hello Extensions of the world!",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["contextMenus","activeTab", "scripting", "windows"], 
+    "host_permissions": [
+      "https://boshiamy.then.tw/*"
+    ],
+    "background": {
+      "service_worker": "dist/background.js"
+    },    
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["styles.css"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["dist/contests.js"]
+      }
+    ]
+  }
